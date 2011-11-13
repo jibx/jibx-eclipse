@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://jibx.sourceforge.net/eclipse/">
+      JiBX Eclipse Plugin
+   </description>
+   <feature url="features/org.jibx.eclipse.feature_1.2.3.jar" id="org.jibx.eclipse.feature" version="1.2.3">
+      <category name="jibx-1.2.3"/>
+   </feature>
+   <feature url="features/org.jibx.eclipse.feature_1.2.2.jar" id="org.jibx.eclipse.feature" version="1.2.2">
+      <category name="jibx-1.2.2"/>
+   </feature>
+   <feature url="features/org.jibx.eclipse.feature_1.2.1.jar" id="org.jibx.eclipse.feature" version="1.2.1">
+      <category name="jibx-1.2.1"/>
+   </feature>   
+   <feature url="features/org.jibx.eclipse.feature_1.1.6.a.jar" id="org.jibx.eclipse.feature" version="1.1.6.a">
+      <category name="jibx-1.1.6.a"/>
+   </feature>
+   <feature url="features/org.jibx.m2e.feature_1.2.3.201107241325.jar" id="org.jibx.m2e.feature" version="1.2.3.201107241325">
+      <category name="org.jibx.m2e.category"/>
+   </feature>
+   
+   <archive path="plugins/org.jibx.eclipse_1.2.3.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.3.jar"/>   
+   <archive path="plugins/org.jibx.eclipse_1.2.2.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.2.jar"/>   
+   <archive path="plugins/org.jibx.eclipse_1.2.1.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.1.jar"/>   
+   <archive path="plugins/org.jibx.eclipse_1.1.6.a.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.1.6.a.jar"/>
+   <archive path="plugins/org.jibx.m2e.plugin_1.2.3.201107241325.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.m2e.plugin_1.2.3.201107241325.jar"/>
+   
+   <category-def name="jibx-1.2.3" label="JiBX Eclipse plugin 1.2.3">
+      <description>
+         JiBX Eclipse plugin 1.2.3
+      </description>
+   </category-def>
+   <category-def name="jibx-1.2.2" label="JiBX Eclipse plugin 1.2.2">
+      <description>
+         JiBX Eclipse plugin 1.2.2
+      </description>
+   </category-def>
+   <category-def name="jibx-1.2.1" label="JiBX Eclipse plugin 1.2.1">
+      <description>
+         JiBX Eclipse plugin 1.2.1
+      </description>
+   </category-def>
+   <category-def name="jibx-1.1.6.a" label="JiBX Eclipse plugin 1.1.6.a">
+      <description>
+         JiBX Eclipse plugin 1.1.6.a
+      </description>
+   </category-def>
+   <category-def name="org.jibx.m2e.category" label="JiBX m2e connector">
+      <description>
+         JiBX m2e connector
+      </description>
+   </category-def>   
+</site>

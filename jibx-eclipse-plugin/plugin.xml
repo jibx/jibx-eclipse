@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.3"?>
+<plugin>
+
+   <extension
+         id="JibxBindingBuilder"
+         name="JiBX Binding Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="org.jibx.eclipse.builder.JibxBindingBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="JibxNature"
+         name="JiBX Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.jibx.eclipse.builder.JibxNature">
+         </run>
+      </runtime>
+      <builder
+            id="org.jibx.eclipse.JibxBindingBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            id="org.jibx.eclipse.projectMenu" >
+         <menu
+               id="jibx-eclipse"
+               label="JiBX"
+               path="additions">
+            <separator name="natureGroup"/>
+            <separator name="enable"/>
+         </menu>
+      </objectContribution>      
+
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            id="org.jibx.eclipse.projectMenus">
+         <visibility>
+           <not>
+              <objectState name="nature"
+                    value="org.jibx.eclipse.JibxNature">
+              </objectState>
+           </not>
+         </visibility>
+         <action
+               class="org.jibx.eclipse.builder.EnableNatureAction"
+               id="org.jibx.eclipse.enableAction"
+               label="Enable"
+               menubarPath="jibx-eclipse/enable">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            id="org.jibx.eclipse.projectMenus">
+         <visibility>
+            <objectState
+                  name="nature"
+                  value="org.jibx.eclipse.JibxNature">
+            </objectState>
+         </visibility>
+         <action
+               label="Disable"
+               class="org.jibx.eclipse.builder.DisableNatureAction"
+               menubarPath="jibx-eclipse/enable"
+               id="org.jibx.eclipse.disableAction">
+         </action>
+      </objectContribution>      
+      
+      
+      
+   </extension>
+   <extension
+         id="org.jibx.eclipse.jibxProblem"
+         name="JiBX Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+      
+	<extension point="org.eclipse.ui.propertyPages">
+	      <page	name="JiBX"
+				class="org.jibx.eclipse.properties.JibxPropertyPage"
+				id="org.jibx.eclipse.jibxPropertyPage">
+           		<enabledWhen>
+				      <adapt type="org.eclipse.core.resources.IProject">
+				        <test 
+				          forcePluginActivation="true"
+				          property="org.eclipse.core.resources.projectNature"
+				          value="org.jibx.eclipse.JibxNature"/>
+				      </adapt>
+           		</enabledWhen>
+	      </page>
+	</extension>   
+   
+<!--   
+	<extension 
+	         point="org.eclipse.ui.propertyPages">
+	      <page
+	            objectClass="org.eclipse.core.resources.IProject"
+	            name="JiBX"
+				class="org.jibx.eclipse.properties.JibxPropertyPage"
+	            adaptable="true"
+				id="org.jibx.eclipse.jibxPropertyPage">
+		         <filter
+		               name="nature"
+		               value="org.jibx.eclipse.JibxNature">
+		         </filter>
+	      </page>
+	</extension>   -->
+
+</plugin>
