@@ -33,7 +33,7 @@ public class JibxPropertyPage extends PropertyPage {
 	public static final String JIBX_VERBOSE_PROPERTY = "JIBX_VERBOSE";
 
 	private Button [] versionButton;
-	private static final String [] JIBX_VERSION_TITLES = new String [] {"1.2.3"}; // {"1.2.2"}; // {"1.2.1"}; // "1.2", "1.1.6.a"};
+	private static final String [] JIBX_VERSION_TITLES = new String [] {"1.2.4"}; // {"1.2.2"}; // {"1.2.1"}; // "1.2", "1.1.6.a"};
 	public static final String DEFAULT_VERSION =  JIBX_VERSION_TITLES[0];
 	public static final String JIBX_VERSION_PROPERTY = "JIBX_VERSION";
 	private String jibxVersion;

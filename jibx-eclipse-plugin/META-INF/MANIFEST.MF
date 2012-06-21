@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JiBX Plug-in
 Bundle-SymbolicName: org.jibx.eclipse; singleton:=true
-Bundle-Version: 1.2.3
+Bundle-Version: 1.2.4
 Bundle-Activator: org.jibx.eclipse.Activator
 Bundle-Vendor: JiBX.org
 Bundle-Localization: plugin
@@ -13,8 +13,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jface.text,
  org.eclipse.ui.console
 Eclipse-LazyStart: true
-Bundle-ClassPath: lib/jibx-run-1.2.3.jar,
- lib/jibx-bind-1.2.3.jar,
+Bundle-ClassPath: lib/jibx-run-1.2.4.jar,
+ lib/jibx-bind-1.2.4.jar,
  lib/bcel.jar,
  lib/xpp3.jar,
  .
