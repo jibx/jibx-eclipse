@@ -1,8 +1,4 @@
 target
-.settings
-.project
-.classpath
 *~
-.metadata
 *.releaseBackup
 release.properties
