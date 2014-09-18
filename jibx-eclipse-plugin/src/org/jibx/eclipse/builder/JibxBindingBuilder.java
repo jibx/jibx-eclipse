@@ -31,6 +31,7 @@ import org.eclipse.core.runtime.QualifiedName;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.jdt.core.IClasspathEntry;
 import org.eclipse.jdt.core.IJavaProject;
+import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.ui.console.ConsolePlugin;
@@ -117,9 +118,18 @@ public class JibxBindingBuilder extends IncrementalProjectBuilder {
 		IClasspathEntry [] cpe = javaProject.getResolvedClasspath(false);
 		
 		for (int i=0; i<cpe.length; i++) {
-			if (IClasspathEntry.CPE_LIBRARY == cpe[i].getEntryKind())
-				classPathSet.add(cpe[i].getPath().toOSString());
-			else if (IClasspathEntry.CPE_PROJECT == cpe[i].getEntryKind()) {
+			if (IClasspathEntry.CPE_LIBRARY == cpe[i].getEntryKind()) {
+				IPackageFragmentRoot[] pfrs = javaProject.findPackageFragmentRoots(cpe[i]);
+				for (IPackageFragmentRoot pfr : pfrs) {
+					IPath path;
+					if (pfr.isExternal()) {
+						path = pfr.getPath();
+					} else {
+						path = project.getWorkspace().getRoot().getLocation().append(pfr.getPath());
+					}
+					classPathSet.add(path.toOSString());
+				}
+			} else if (IClasspathEntry.CPE_PROJECT == cpe[i].getEntryKind()) {
 				IProject child = javaProject.getProject().getWorkspace().getRoot().getProject(cpe[i].getPath().toString());
 				addPaths(classPathSet, child); // recurse
 			} else
