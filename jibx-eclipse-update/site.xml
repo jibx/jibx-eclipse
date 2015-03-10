@@ -17,22 +17,29 @@
    </feature>
    <feature url="features/org.jibx.eclipse.feature_1.2.1.jar" id="org.jibx.eclipse.feature" version="1.2.1">
       <category name="jibx-1.2.1"/>
-   </feature>   
+   </feature>
    <feature url="features/org.jibx.eclipse.feature_1.1.6.a.jar" id="org.jibx.eclipse.feature" version="1.1.6.a">
       <category name="jibx-1.1.6.a"/>
    </feature>
    <feature url="features/org.jibx.m2e.feature_1.2.3.201107241325.jar" id="org.jibx.m2e.feature" version="1.2.3.201107241325">
       <category name="org.jibx.m2e.category"/>
    </feature>
-   
-   <archive path="plugins/org.jibx.eclipse_1.2.5.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.5.jar"/>   
-   <archive path="plugins/org.jibx.eclipse_1.2.4.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.4.jar"/>   
-   <archive path="plugins/org.jibx.eclipse_1.2.3.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.3.jar"/>   
-   <archive path="plugins/org.jibx.eclipse_1.2.2.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.2.jar"/>   
-   <archive path="plugins/org.jibx.eclipse_1.2.1.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.1.jar"/>   
+   <feature url="features/org.jibx.eclipse.feature_1.2.6.bcel-6_0-20150308_002201-118.jar" id="org.jibx.eclipse.feature" version="1.2.6.bcel-6_0-20150308_002201-118">
+      <category name="jibx-1.2.6.bcel-6_0-20150308_002201-118"/>
+   </feature>
+   <archive path="plugins/org.jibx.eclipse_1.2.6.bcel-6_0-20150225_102155-112.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.6.bcel-6_0-20150225_102155-112.jar"/>
+   <archive path="plugins/org.jibx.eclipse_1.2.5.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.5.jar"/>
+   <archive path="plugins/org.jibx.eclipse_1.2.4.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.4.jar"/>
+   <archive path="plugins/org.jibx.eclipse_1.2.3.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.3.jar"/>
+   <archive path="plugins/org.jibx.eclipse_1.2.2.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.2.jar"/>
+   <archive path="plugins/org.jibx.eclipse_1.2.1.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.2.1.jar"/>
    <archive path="plugins/org.jibx.eclipse_1.1.6.a.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.eclipse_1.1.6.a.jar"/>
    <archive path="plugins/org.jibx.m2e.plugin_1.2.3.201107241325.jar" url="http://jibx.sourceforge.net/eclipse/plugins/org.jibx.m2e.plugin_1.2.3.201107241325.jar"/>
-   
+   <category-def name="jibx-1.2.6.bcel-6_0-20150308_002201-118" label="JiBX Eclipse plugin 1.2.6.bcel-6_0-20150308_002201-118">
+      <description>
+         JiBX Eclipse plugin 1.2.6.bcel-6_0-20150308_002201-118
+      </description>
+   </category-def>
    <category-def name="jibx-1.2.5" label="JiBX Eclipse plugin 1.2.5">
       <description>
          JiBX Eclipse plugin 1.2.5
@@ -67,5 +74,5 @@
       <description>
          JiBX m2e connector
       </description>
-   </category-def>   
+   </category-def>
 </site>
